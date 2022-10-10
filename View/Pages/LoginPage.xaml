@@ -6,11 +6,11 @@
       Title="LoginPage"
       Height="300"
       Width="300"
-      Background="#0B0C10">
+      Background="#E3E2DF">
     <Page.Resources>
         <Style TargetType="TextBlock">
             <Style.Setters>
-                <Setter Property="Foreground" Value="#66FCF1"/>
+                <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="FontFamily" Value="Roboto"/>
             </Style.Setters>
@@ -20,18 +20,18 @@
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="FontFamily" Value="Roboto"/>
                 <Setter Property="Width" Value="200"/>
-                <Setter Property="Background" Value="#1F2833"/>
-                <Setter Property="BorderBrush" Value="#1F2833"/>
-                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Background" Value="#EDC7B7"/>
+                <Setter Property="BorderBrush" Value="#EDC7B7"/>
+                <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="Margin" Value="0,0,0,10"/>
             </Style.Setters>
         </Style>
         <Style TargetType="Button">
             <Style.Setters>
                 <Setter Property="Background" Value="{x:Null}"/>
-                <Setter Property="BorderBrush" Value="#66FCF1"/>
+                <Setter Property="BorderBrush" Value="#E3AFBC"/>
                 <Setter Property="BorderThickness" Value="3"/>
-                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="Margin" Value="5"/>
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="FontFamily" Value="Roboto"/>
@@ -45,11 +45,14 @@
                     </Setter.Value>
                 </Setter>
             </Style.Setters>
-            
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#1F2833"/>
-                    <Setter Property="Foreground" Value="#66FCF1"></Setter>
+                    <Setter Property="Background" Value="#EDC7B7"/>
+                    <Setter Property="FontSize" Value="30"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#EDC7B7"/>
+                    <Setter Property="FontSize" Value="20"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -74,13 +77,9 @@
             <TextBlock Text="Пароль"/>
             <TextBox Text="222"/>
         </StackPanel>
-        <StackPanel Grid.Row="2"
-                    Orientation="Horizontal"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center">
-            <Button Content="Войти"/>
-            <Button Content="Регистрация"/>
-        </StackPanel>
-        
+        <Button Grid.Row="2"
+                Content="Вход"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
     </Grid>
 </Page>
