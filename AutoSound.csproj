@@ -11,6 +11,12 @@
       <Folder Include="Infrastructure\Command\Base" />
       <Folder Include="Model" />
       <Folder Include="ViewModel\Base" />
+      <Folder Include="View\UserControls" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MaterialDesignColors" Version="2.0.9" />
+      <PackageReference Include="MaterialDesignThemes" Version="4.6.1" />
     </ItemGroup>
 
 </Project>
