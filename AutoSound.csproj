@@ -5,11 +5,12 @@
         <TargetFramework>net6.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
+        <LangVersion>10</LangVersion>
+        <Company>AutoSound.LLC</Company>
     </PropertyGroup>
 
     <ItemGroup>
       <Folder Include="Infrastructure\Command\Base" />
-      <Folder Include="Model" />
       <Folder Include="ViewModel\Base" />
       <Folder Include="View\UserControls" />
     </ItemGroup>
