@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AutoSound
+namespace AutoSound.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
