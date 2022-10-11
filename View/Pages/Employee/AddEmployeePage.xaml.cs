@@ -1,6 +1,6 @@
 using System.Windows.Controls;
 
-namespace AutoSound.View.Pages.EmployeePages;
+namespace AutoSound.View.Pages.Employee;
 
 public partial class AddEmployeePage : Page
 {

@@ -1,9 +1,10 @@
-<Page x:Class="AutoSound.View.Pages.EmployeePages.AddEmployeePage"
+<Page x:Class="AutoSound.View.Pages.Employee.AddEmployeePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       Title="AddEmployeePage"
+      Background="{StaticResource MainBackground}"
       Height="500"
       Width="300">
     <Page.Resources>

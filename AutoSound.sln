@@ -12,6 +12,5 @@ Global
 		{3275145E-4506-42D3-A441-6531C0B3696E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3275145E-4506-42D3-A441-6531C0B3696E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3275145E-4506-42D3-A441-6531C0B3696E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3275145E-4506-42D3-A441-6531C0B3696E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
