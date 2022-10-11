@@ -3,43 +3,43 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      Title="EditEmployeePage" 
+      Title="EditEmployeePage"
       Background="{StaticResource MainBackground}"
       Height="500"
       Width="300">
     <Page.Resources>
         <Style TargetType="TextBlock">
             <Style.Setters>
-                <Setter Property="Foreground" Value="{StaticResource MainForeground}"/>
-                <Setter Property="FontSize" Value="20"/>
-                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="Foreground" Value="{StaticResource MainForeground}" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontFamily" Value="Roboto" />
             </Style.Setters>
         </Style>
         <Style TargetType="TextBox">
             <Style.Setters>
-                <Setter Property="FontSize" Value="20"/>
-                <Setter Property="FontFamily" Value="Roboto"/>
-                <Setter Property="Width" Value="200"/>
-                <Setter Property="Background" Value="{StaticResource ActionBackground}"/>
-                <Setter Property="BorderBrush" Value="{StaticResource ActionBackground}"/>
-                <Setter Property="Foreground" Value="{StaticResource MainForeground }"/>
-                <Setter Property="Margin" Value="0,0,0,10"/>
-                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontFamily" Value="Roboto" />
+                <Setter Property="Width" Value="200" />
+                <Setter Property="Background" Value="{StaticResource ActionBackground}" />
+                <Setter Property="BorderBrush" Value="{StaticResource ActionBackground}" />
+                <Setter Property="Foreground" Value="{StaticResource MainForeground }" />
+                <Setter Property="Margin" Value="0,0,0,10" />
+                <Setter Property="TextAlignment" Value="Center" />
             </Style.Setters>
         </Style>
         <Style TargetType="Button">
             <Style.Setters>
-                <Setter Property="Background" Value="{x:Null}"/>
-                <Setter Property="BorderThickness" Value="3"/>
-                <Setter Property="Foreground" Value="{StaticResource MainForeground}"/>
-                <Setter Property="Margin" Value="5"/>
-                <Setter Property="FontSize" Value="20"/>
-                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="Background" Value="{x:Null}" />
+                <Setter Property="BorderThickness" Value="3" />
+                <Setter Property="Foreground" Value="{StaticResource MainForeground}" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontFamily" Value="Roboto" />
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border Background="{TemplateBinding Background}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Border>
                         </ControlTemplate>
                     </Setter.Value>
@@ -47,48 +47,48 @@
             </Style.Setters>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="{StaticResource ActionBackground}"/>
-                    <Setter Property="FontSize" Value="22"/>
+                    <Setter Property="Background" Value="{StaticResource ActionBackground}" />
+                    <Setter Property="FontSize" Value="22" />
                 </Trigger>
                 <Trigger Property="IsPressed" Value="True">
-                    <Setter Property="Background" Value="{StaticResource ActionBackground}"/>
-                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Background" Value="{StaticResource ActionBackground}" />
+                    <Setter Property="FontSize" Value="20" />
                 </Trigger>
             </Style.Triggers>
         </Style>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0"
                    Text="Введите новые данные сотрудника"
                    TextWrapping="Wrap"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   TextAlignment="Center"/>
+                   TextAlignment="Center" />
         <StackPanel Grid.Row="1"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-            <TextBlock Text="Имя"/>
-            <TextBox Text="Egor"/>
-            <TextBlock Text="Фамилия"/>
-            <TextBox Text="Malyanov"/>
-            <TextBlock Text="Отчество"/>
-            <TextBox Text="Vyacheslavovich"/>
-            <TextBlock Text="Должность"/>
-            <TextBox Text="Student"/>
-            <TextBlock Text="Логин"/>
-            <TextBlock Text="LoginMalyanov" 
+            <TextBlock Text="Имя" />
+            <TextBox Text="Egor" />
+            <TextBlock Text="Фамилия" />
+            <TextBox Text="Malyanov" />
+            <TextBlock Text="Отчество" />
+            <TextBox Text="Vyacheslavovich" />
+            <TextBlock Text="Должность" />
+            <TextBox Text="Student" />
+            <TextBlock Text="Логин" />
+            <TextBlock Text="LoginMalyanov"
                        Background="{StaticResource ActionBackground}" Margin="0,0,0,10"
-                       TextAlignment="Center"/>
-            <TextBlock Text="Пароль"/>
-            <TextBlock Text="Pass" 
+                       TextAlignment="Center" />
+            <TextBlock Text="Пароль" />
+            <TextBlock Text="Pass"
                        Background="{StaticResource ActionBackground}"
-                       TextAlignment="Center"/>
+                       TextAlignment="Center" />
         </StackPanel>
-        <Button Grid.Row="2" Content="Добавить сотрудника"/>
+        <Button Grid.Row="2" Content="Добавить сотрудника" />
     </Grid>
 </Page>

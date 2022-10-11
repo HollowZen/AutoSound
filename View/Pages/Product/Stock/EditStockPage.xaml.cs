@@ -1,6 +1,6 @@
 using System.Windows.Controls;
 
-namespace AutoSound.View.Pages;
+namespace AutoSound.View.Pages.Product.Stock;
 
 public partial class EditStockPage : Page
 {
@@ -9,4 +9,3 @@ public partial class EditStockPage : Page
         InitializeComponent();
     }
 }
-

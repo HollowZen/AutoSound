@@ -9,35 +9,35 @@
     <Page.Resources>
         <Style TargetType="TextBlock">
             <Style.Setters>
-                <Setter Property="Foreground" Value="{StaticResource MainForeground}"/>
-                <Setter Property="FontSize" Value="20"/>
-                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="Foreground" Value="{StaticResource MainForeground}" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontFamily" Value="Roboto" />
             </Style.Setters>
         </Style>
         <Style TargetType="TextBox">
             <Style.Setters>
-                <Setter Property="FontSize" Value="20"/>
-                <Setter Property="FontFamily" Value="Roboto"/>
-                <Setter Property="Width" Value="200"/>
-                <Setter Property="Background" Value="{StaticResource ActionBackground}"/>
-                <Setter Property="BorderBrush" Value="{StaticResource ActionBackground}"/>
-                <Setter Property="Foreground" Value="{StaticResource MainForeground }"/>
-                <Setter Property="Margin" Value="0,0,0,10"/>
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontFamily" Value="Roboto" />
+                <Setter Property="Width" Value="200" />
+                <Setter Property="Background" Value="{StaticResource ActionBackground}" />
+                <Setter Property="BorderBrush" Value="{StaticResource ActionBackground}" />
+                <Setter Property="Foreground" Value="{StaticResource MainForeground }" />
+                <Setter Property="Margin" Value="0,0,0,10" />
             </Style.Setters>
         </Style>
         <Style TargetType="Button">
             <Style.Setters>
-                <Setter Property="Background" Value="{x:Null}"/>
-                <Setter Property="BorderThickness" Value="3"/>
-                <Setter Property="Foreground" Value="{StaticResource MainForeground}"/>
-                <Setter Property="Margin" Value="5"/>
-                <Setter Property="FontSize" Value="20"/>
-                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="Background" Value="{x:Null}" />
+                <Setter Property="BorderThickness" Value="3" />
+                <Setter Property="Foreground" Value="{StaticResource MainForeground}" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontFamily" Value="Roboto" />
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border Background="{TemplateBinding Background}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Border>
                         </ControlTemplate>
                     </Setter.Value>
@@ -45,39 +45,39 @@
             </Style.Setters>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="{StaticResource ActionBackground}"/>
-                    <Setter Property="FontSize" Value="22"/>
+                    <Setter Property="Background" Value="{StaticResource ActionBackground}" />
+                    <Setter Property="FontSize" Value="22" />
                 </Trigger>
                 <Trigger Property="IsPressed" Value="True">
-                    <Setter Property="Background" Value="{StaticResource ActionBackground}"/>
-                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Background" Value="{StaticResource ActionBackground}" />
+                    <Setter Property="FontSize" Value="20" />
                 </Trigger>
             </Style.Triggers>
         </Style>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    Text="Вход в систему"
-                   FontSize="30"/>
+                   FontSize="30" />
         <StackPanel Grid.Row="1"
                     Orientation="Vertical"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-            <TextBlock Text="Логин"/>
-            <TextBox Text="111"/>
-            <TextBlock Text="Пароль"/>
-            <TextBox Text="222"/>
+            <TextBlock Text="Логин" />
+            <TextBox Text="111" />
+            <TextBlock Text="Пароль" />
+            <TextBox Text="222" />
         </StackPanel>
         <Button Grid.Row="2"
                 Content="Вход"
                 VerticalAlignment="Center"
-                HorizontalAlignment="Center"/>
+                HorizontalAlignment="Center" />
     </Grid>
 </Page>

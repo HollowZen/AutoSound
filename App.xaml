@@ -3,10 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="/View/Pages/EmployeePages/EmployeePage.xaml">
     <Application.Resources>
-        <SolidColorBrush x:Key="MainBackground" Color="#E3E2DF"/>
-        <SolidColorBrush x:Key="MainForeground" Color="Black"/>
-        <SolidColorBrush x:Key="ActionBackground" Color="#EDC7B7"/>
+        <SolidColorBrush x:Key="MainBackground" Color="#E3E2DF" />
+        <SolidColorBrush x:Key="MainForeground" Color="Black" />
+        <SolidColorBrush x:Key="ActionBackground" Color="#EDC7B7" />
     </Application.Resources>
 </Application>
-
-

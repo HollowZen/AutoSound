@@ -10,17 +10,17 @@
     <Page.Resources>
         <Style TargetType="Button">
             <Style.Setters>
-                <Setter Property="Background" Value="{x:Null}"/>
-                <Setter Property="BorderThickness" Value="3"/>
-                <Setter Property="Foreground" Value="{StaticResource MainForeground}"/>
-                <Setter Property="Margin" Value="10"/>
-                <Setter Property="FontSize" Value="20"/>
-                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="Background" Value="{x:Null}" />
+                <Setter Property="BorderThickness" Value="3" />
+                <Setter Property="Foreground" Value="{StaticResource MainForeground}" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontFamily" Value="Roboto" />
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border Background="{TemplateBinding Background}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Border>
                         </ControlTemplate>
                     </Setter.Value>
@@ -28,34 +28,34 @@
             </Style.Setters>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="{StaticResource ActionBackground}"/>
-                    <Setter Property="FontSize" Value="22"/>
+                    <Setter Property="Background" Value="{StaticResource ActionBackground}" />
+                    <Setter Property="FontSize" Value="22" />
                 </Trigger>
                 <Trigger Property="IsPressed" Value="True">
-                    <Setter Property="Background" Value="{StaticResource ActionBackground}"/>
-                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Background" Value="{StaticResource ActionBackground}" />
+                    <Setter Property="FontSize" Value="20" />
                 </Trigger>
             </Style.Triggers>
         </Style>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
-        <ListView Grid.Row="0" 
-                  Margin="5" 
-                  Background="{StaticResource MainBackground}" 
+        <ListView Grid.Row="0"
+                  Margin="5"
+                  Background="{StaticResource MainBackground}"
                   FontSize="20"
                   FontFamily="Roboto">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Имя"/>
-                    <GridViewColumn Header="Фамилия"/>
-                    <GridViewColumn Header="Отчество"/>
-                    <GridViewColumn Header="Должность"/>
-                    <GridViewColumn Header="Логин"/>
-                    <GridViewColumn Header="Пароль"/>
+                    <GridViewColumn Header="Имя" />
+                    <GridViewColumn Header="Фамилия" />
+                    <GridViewColumn Header="Отчество" />
+                    <GridViewColumn Header="Должность" />
+                    <GridViewColumn Header="Логин" />
+                    <GridViewColumn Header="Пароль" />
                 </GridView>
             </ListView.View>
         </ListView>
@@ -63,10 +63,10 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-            <Button Content="Добавить"/>
-            <Button Content="Удалить"/>
-            <Button Content="Изменить"/>
+            <Button Content="Добавить" />
+            <Button Content="Удалить" />
+            <Button Content="Изменить" />
         </StackPanel>
-        
+
     </Grid>
 </Page>
