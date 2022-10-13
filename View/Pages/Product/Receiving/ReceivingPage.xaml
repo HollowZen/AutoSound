@@ -51,6 +51,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" />
                 <DataGridTextColumn Header="Тип" />
+                <DataGridTextColumn Header="Комментарий" />
                 <DataGridTextColumn Header="Количество" />
                 <DataGridTextColumn Header="Статус" />
             </DataGrid.Columns>
