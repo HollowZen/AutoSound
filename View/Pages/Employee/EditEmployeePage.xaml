@@ -89,6 +89,6 @@
                        Background="{StaticResource ActionBackground}"
                        TextAlignment="Center" />
         </StackPanel>
-        <Button Grid.Row="2" Content="Добавить сотрудника" />
+        <Button Grid.Row="2" Content="Сохранить изменения" />
     </Grid>
 </Page>
