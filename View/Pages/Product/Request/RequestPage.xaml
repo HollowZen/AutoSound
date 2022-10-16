@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:vm="clr-namespace:AutoSound.ViewModel"
       Background="{StaticResource MainBackground}"
       Height="500"
       Width="700">
@@ -37,6 +38,9 @@
             </Style.Triggers>
         </Style>
     </Page.Resources>
+    <Page.DataContext>
+        <vm:RequestViewModel/>
+    </Page.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -46,17 +50,21 @@
                   Margin="5"
                   Background="{StaticResource MainBackground}"
                   FontSize="20"
-                  FontFamily="Roboto">
+                  FontFamily="Roboto"
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding Stocks}"
+                  CanUserAddRows="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Название" />
-                <DataGridTextColumn Header="Тип" />
-                <DataGridTextColumn Header="Комментарий" />
-                <DataGridTextColumn Header="Количество" />
+                <DataGridTextColumn Binding="{Binding Title}" Header="Название" />
+                <DataGridTextColumn Binding="{Binding Type}" Header="Тип" />
+                <DataGridTextColumn Binding="{Binding Comment}" Header="Комментарий" />
+                <DataGridTextColumn Binding="{Binding Count}" Header="Количество" />
             </DataGrid.Columns>
         </DataGrid>
         <Button Grid.Row="1"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Content="Оформить заявку" />
+                Content="Оформить заявку" 
+                Command="{Binding SetRequest}"/>
     </Grid>
 </Page>

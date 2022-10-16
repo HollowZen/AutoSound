@@ -137,9 +137,10 @@ public static class DataWorker
         foreach (var v in newStocks)
         {
             db.Stocks.Update(v);
+            db.SaveChanges();
         }
 
-        db.SaveChanges();
+        
     }
     //Set Request
 
@@ -148,10 +149,12 @@ public static class DataWorker
         using AutoSoundDbContext db = new();
         foreach (var v in newRequest)
         {
+            v.Status = "Заказано";
             db.Stocks.Add(v);
+            db.SaveChanges();
         }
 
-        db.SaveChanges();
+        
     }
     // Get Receiving
 
@@ -169,10 +172,31 @@ public static class DataWorker
         foreach (var v in newData)
         {
             db.Stocks.Update(v);
+            db.SaveChanges();
         }
 
-        db.SaveChanges();
+
+        
 
     }
     //Selling
+
+
+    public static void Selling(List<Stock> sellingList)
+    {
+        using (AutoSoundDbContext db = new AutoSoundDbContext())
+        {
+            var temp = db.Stocks.ToList();
+            foreach (var v in sellingList)
+            {
+                foreach (var t in temp)
+                {
+                    if (t.Id == v.Id)
+                    {
+                        t.Count -= v.Count;
+                    }
+                }
+            }
+        }
+    }
 }

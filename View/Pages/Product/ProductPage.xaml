@@ -4,9 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       Title="ProductPage"
-      Background="{StaticResource MainBackground}"
-      Height="500"
-      Width="700">
+      Background="{StaticResource MainBackground}">
     <Page.Resources>
         <Style TargetType="Button">
             <Style.Setters>
@@ -40,16 +38,16 @@
     </Page.Resources>
     <TabControl Background="{StaticResource MainBackground}">
         <TabItem Header="Информация о товарах">
-            <Frame />
+            <Frame Source="Stock/StockPage.xaml" NavigationUIVisibility="Hidden"/>
         </TabItem>
         <TabItem Header="Заявка на товар">
-            <Frame />
+            <Frame Source="Request/RequestPage.xaml" NavigationUIVisibility="Hidden"/>
         </TabItem>
         <TabItem Header="Прием товара">
-            <Frame />
+            <Frame Source="Receiving/ReceivingPage.xaml" NavigationUIVisibility="Hidden"/>
         </TabItem>
         <TabItem Header="Отпуск товара">
-            <Frame />
+            <Frame Source="Selling/SellingPage.xaml" NavigationUIVisibility="Hidden"/>
         </TabItem>
     </TabControl>
 </Page>

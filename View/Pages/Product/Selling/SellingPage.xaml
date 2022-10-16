@@ -3,11 +3,11 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d"
-
+      xmlns:vm="clr-namespace:AutoSound.ViewModel"
       Title="SellingPage"
       Background="{StaticResource MainBackground}"
       Height="500"
-      Width="700">
+      Width="1400">
     <Page.Resources>
         <Style TargetType="TextBlock">
             <Style.Setters>
@@ -46,38 +46,32 @@
             </Style.Triggers>
         </Style>
     </Page.Resources>
-    <Grid>
+    <Page.DataContext>
+        <vm:SellingViewModel/>
+    </Page.DataContext>
+    <Grid  Margin="0,0,20,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="30" />
-            <RowDefinition Height="50" />
-        </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0"
-                  Margin="5"
-                  Background="{StaticResource MainBackground}"
-                  FontSize="20"
-                  FontFamily="Roboto">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Название" />
-                <DataGridTextColumn Header="Тип" />
-                <DataGridTextColumn Header="Комментарий" />
-                <DataGridTextColumn Header="Цена за шт" />
-                <DataGridTextColumn Header="Количество" />
-            </DataGrid.Columns>
-        </DataGrid>
-        <DockPanel Grid.Row="1"
-                   Margin="10,0,10,0">
-            <TextBlock DockPanel.Dock="Left"
-                       VerticalAlignment="Bottom"
-                       Text="Сумма к оплате:" />
-            <TextBlock DockPanel.Dock="Right"
-                       VerticalAlignment="Bottom"
-                       Text="NNNNN" />
-            <Border Background="{x:Null}" />
-        </DockPanel>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <DataGrid Grid.Row="0"
+                      Margin="5"
+                      Background="{StaticResource MainBackground}"
+                      FontSize="20"
+                      FontFamily="Roboto"
+                      AutoGenerateColumns="False"
+                      ItemsSource="{Binding Stocks,UpdateSourceTrigger=PropertyChanged}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Title}" Header="Название" />
+                    <DataGridTextColumn Binding="{Binding Price}" Header="Цена за шт" />
+                    <DataGridTextColumn Binding="{Binding Count}" Header="Количество" />
+                </DataGrid.Columns>
+            </DataGrid>
         <Button Grid.Row="2"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Content="Оформить продажу" />
+                Content="Оформить продажу" 
+                Command="{Binding Command}"/>
     </Grid>
 </Page>

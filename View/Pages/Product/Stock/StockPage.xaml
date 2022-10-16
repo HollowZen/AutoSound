@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:vm="clr-namespace:AutoSound.ViewModel"
       Title="StockPage"
       Background="{StaticResource MainBackground}"
       Height="500"
@@ -38,29 +39,42 @@
             </Style.Triggers>
         </Style>
     </Page.Resources>
+    <Page.DataContext>
+        <vm:StockViewModel/>
+    </Page.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
-        <ListView Margin="5"
+        <DataGrid Margin="5"
                   Background="{StaticResource MainBackground}"
                   FontSize="20"
-                  FontFamily="Roboto">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Название" />
-                    <GridViewColumn Header="Тип" />
-                    <GridViewColumn Header="Комментарий" />
-                    <GridViewColumn Header="Цена за шт" />
-                    <GridViewColumn Header="Количество" />
-                    <GridViewColumn Header="Статус" />
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Button Grid.Row="1"
+                  FontFamily="Roboto"
+                  ItemsSource="{Binding Stocks}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Title}" Header="Название" />
+                <DataGridTextColumn Binding="{Binding Type}" Header="Тип" />
+                <DataGridTextColumn Binding="{Binding Comment}" Header="Комментарий" />
+                <DataGridTextColumn Binding="{Binding Price}" Header="Цена за шт" />
+                <DataGridTextColumn Binding="{Binding Count}" Header="Количество" />
+                <DataGridTextColumn Binding="{Binding Status}" Header="Статус" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button 
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Content="Корректировка информации о товарах" />
+                Content="Корректировка информации о товарах" 
+                Command="{Binding EditCommand}"/>
+            <Button Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Content="Обновить" 
+                    Command="{Binding Refresh}"/>
+        </StackPanel>
+        
     </Grid>
 </Page>

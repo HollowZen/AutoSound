@@ -6,7 +6,10 @@ namespace AutoSound.Model.ModelDb;
 
 public class AutoSoundDbContext: DbContext
 {
-
+    public AutoSoundDbContext()
+    {
+        Database.EnsureCreated();
+    }
     public virtual DbSet<Employee> Employees  { get; set; } = null!;
     public virtual DbSet<Security> Securities  { get; set; } = null!;
     public virtual DbSet<Post> Posts { get; set; } = null!;
@@ -17,7 +20,7 @@ public class AutoSoundDbContext: DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-IKCHMR8\\HOLLOWSPACE;Database=AutoSoundDB;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=AutoSoundDB;Trusted_Connection=True;");
         }
     }
 
